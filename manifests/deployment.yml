@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: akrobetpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: akrobetpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: akrobetpipelinesjavascriptdocker 
+          image: fluxtor.azurecr.io/akrobetpipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
